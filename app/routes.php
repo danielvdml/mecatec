@@ -78,4 +78,9 @@ Route::get("reclamo",function()
     
 });
 
+Route::get("principal",function()
+{
+	return  View::make('Theme2/index');
+    
+});
 
