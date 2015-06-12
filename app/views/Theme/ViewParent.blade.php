@@ -51,28 +51,21 @@
 
 	<!-- ////////////////////////////////// MENÚ DE NOTIFICACIONES ///////////////////////////////////////////////////-->
 
-	<section id="container" >
 
+<div>
 	<header class="header black-bg">
-              <div class="sidebar-toggle-box">
+            <div class="sidebar-toggle-box">
                   <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
-              </div>
+            </div>
             <!--logo start-->
-            <a href="index.html" class="logo"><b>MECATEC PERÚ</b></a>
-            <!--logo end-->
-            
-                    <!-- settings end -->
-                    <!-- inbox dropdown start-->
-                    
-               
-                <!--  notification end -->
+            <a href="home" class="logo"><b>MECATEC PERÚ</b></a>
             
             <div class="top-menu">
             	<ul class="nav pull-right top-menu">
                     <li><a class="logout" href="login">Logout</a></li>
             	</ul>
             </div>
-        </header>
+    </header>
 
   
   <!-- ////////////////////////////////////////////// MENÚ PRINCIPAL /////////////////////////////////////////////////-->
@@ -167,82 +160,18 @@
 
 
 	@section('SolicitarCotizacion')
-		   <script type="application/javascript">
-        $(document).ready(function () {
-            $("#date-popover").popover({html: true, trigger: "manual"});
-            $("#date-popover").hide();
-            $("#date-popover").click(function (e) {
-                $(this).hide();
-            });
-        
-            $("#my-calendar").zabuto_calendar({
-                action: function () {
-                    return myDateFunction(this.id, false);
-                },
-                action_nav: function () {
-                    return myNavFunction(this.id);
-                },
-                ajax: {
-                    url: "show_data.php?action=1",
-                    modal: true
-                },
-                legend: [
-                    {type: "text", label: "Special event", badge: "00"},
-                    {type: "block", label: "Regular event", }
-                ]
-            });
-        });
-        
-        
-        function myNavFunction(id) {
-            $("#date-popover").hide();
-            var nav = $("#" + id).data("navigation");
-            var to = $("#" + id).data("to");
-            console.log('nav ' + nav + ' to: ' + to.month + '/' + to.year);
-        }
-    </script>
-
-
+		 {{HTML::script('assets/js/SolicitarCotizacion.js');}}
 	@show
 	@section('HomeCliente')
-		  
-    <script type="application/javascript">
-        $(document).ready(function () {
-            $("#date-popover").popover({html: true, trigger: "manual"});
-            $("#date-popover").hide();
-            $("#date-popover").click(function (e) {
-                $(this).hide();
-            });
-        
-            $("#my-calendar").zabuto_calendar({
-                action: function () {
-                    return myDateFunction(this.id, false);
-                },
-                action_nav: function () {
-                    return myNavFunction(this.id);
-                },
-                ajax: {
-                    url: "show_data.php?action=1",
-                    modal: true
-                },
-                legend: [
-                    {type: "text", label: "Special event", badge: "00"},
-                    {type: "block", label: "Regular event", }
-                ]
-            });
-        });
-        
-        
-        function myNavFunction(id) {
-            $("#date-popover").hide();
-            var nav = $("#" + id).data("navigation");
-            var to = $("#" + id).data("to");
-            console.log('nav ' + nav + ' to: ' + to.month + '/' + to.year);
-        }
-    </script>
-
+		 {{HTML::script('assets/js/HomeCliente.js');}}
 	@show
 
+	@section('login')
+		{{HTML::script('assets/js/login.js');}}
+		{{HTML::style('assets/css/login.css');}}  
+	@show
+	
+</div>
 
  	{{HTML::script('assets/js/chart-master/Chart.js');}} 
     {{HTML::script('assets/js/jquery.js');}}

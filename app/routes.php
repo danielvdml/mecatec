@@ -84,3 +84,7 @@ Route::get("principal",function()
     
 });
 
+
+Route::post("postLogin","AuthController@postLogin");
+
+Route::post("createUser","AuthController@createUser");
