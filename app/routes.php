@@ -57,11 +57,7 @@ Route::get("home",function()
 });
 
 
-Route::get("cotizacion",function()
-{
-	return  View::make('Theme/CotizacionesPasadasCli');
-    
-});
+
 
 
 Route::get("estado",function()
@@ -88,3 +84,11 @@ Route::get("principal",function()
 Route::post("postLogin","AuthController@postLogin");
 
 Route::post("createUser","AuthController@createUser");
+
+Route::get("Exit","AuthController@logOut");
+
+Route::get("cotizacion",array("after"=>"guest",function()
+{
+	return  View::make('Theme/CotizacionesPasadasCli');
+    
+}));

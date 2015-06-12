@@ -63,6 +63,7 @@
             <div class="top-menu">
             	<ul class="nav pull-right top-menu">
                     <li><a class="logout" href="login">Logout</a></li>
+                    <li><a class="Exit" href="Exit">Exit</a></li>
             	</ul>
             </div>
     </header>
@@ -92,14 +93,14 @@
                       </a>
                       <ul class="sub">
                           
-                          <li><a  href="buttons.html">Ver Perfil</a></li>
-                          <li><a  href="panels.html">Actualizar Datos</a></li>
+                          <li><a  href="/">Ver Perfil</a></li>
+                          <li><a  href="/">Actualizar Datos</a></li>
                           
                       </ul>
                   </li>
 
                   <li class="sub-menu">
-                      <a href="javascript:;" >
+                      <a href="javascript:;" >	
                           <i class="fa fa-cogs"></i>
                           <span>Cotizaciones</span>
                       </a>
